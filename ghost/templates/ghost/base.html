@@ -2,24 +2,27 @@
 <!-- ... -->
 {% load static %}
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ghost Tours</title>
   <link rel="stylesheet" href="{% static 'css/ghost.css' %}" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="normal">
-      <a href="{% url 'customer_create' %}">Subscribe</a>
-    </div>
-    <div class="admin">
-      {% if user.is_authenticated %} Welcome, {{ user.username }}
-      <a href="{% url 'customer_list' %}">Customers</a>
-      <a href="{% url 'logout' %}">Log out</a>
-      {% else %}
-      <a href="{% url 'login' %}">Login</a>
-      <a href="{% url 'signup' %}">Signup</a>
-      {% endif %}
-    </div>
-  </nav>
+  <h1 class="Masthead">DC Ghost Tours</h1>
+  <div>
+    <a href="{% url 'customer_create' %}" class="newsletter">Subscribe to Our Newsletter</a>
+  </div>
+  <footer>
+      <span class="welcome">
+        {% if user.is_authenticated %} Welcome, {{ user.username }}
+      </span>
+    <a href="{% url 'customer_list' %}">Customers</a>
+    <a href="{% url 'logout' %}">Log out</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'signup' %}">Signup</a>
+    {% endif %}
+  </footer>
   {% block content %} {% endblock %}
 </body>
 <!-- ... -->
