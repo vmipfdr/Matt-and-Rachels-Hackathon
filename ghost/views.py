@@ -43,4 +43,4 @@ def customer_edit(request, pk):
 
 def customer_delete(request, pk):
     Comment.objects.get(id=pk).delete()
-    return redirect('customer_list')
+    return redirect('/customer_list')
