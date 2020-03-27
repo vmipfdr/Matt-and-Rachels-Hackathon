@@ -6,7 +6,7 @@ from django.db import models
 class Customer(models.Model):
     first = models.CharField(max_length=20)
     last = models.CharField(max_length=20)
-    email = models.TextField(max_length=50)
+    email = models.EmailField(max_length=250)
     # setting up the @ and . restrictions
 
     def __str__(self):

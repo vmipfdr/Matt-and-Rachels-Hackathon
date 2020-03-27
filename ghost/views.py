@@ -26,7 +26,7 @@ def customer_create(request):
         if form.is_valid():
             form.save()
         return redirect('customer_list')
-    form = PostForm()
+    form = CustomerForm()
     return render(request, 'ghost/customer_create.html', {'form': form})
 
 
