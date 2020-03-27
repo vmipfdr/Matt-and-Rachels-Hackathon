@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -38,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ghost',
-    'accounts',
-    'django_extensions'
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +78,11 @@ WSGI_APPLICATION = 'ghost.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ghost',
+        'USER': 'ghost',
+        'PASSWORD': 'ghost',
+        'HOST': 'localhost'
     }
 }
 
