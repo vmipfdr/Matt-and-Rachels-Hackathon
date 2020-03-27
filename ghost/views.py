@@ -6,9 +6,10 @@ from django.contrib.auth.decorators import login_required
 # Create your views here
 
 
+def base(request):
+    return render(request, 'ghost/base.html')
 
 
-@login_required
 def customer_list(request):
     customers = Customer.objects.all()
     return render(request, 'ghost/customer_list.html', {'customers': customers})
