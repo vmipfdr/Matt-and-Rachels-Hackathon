@@ -15,7 +15,6 @@ def customer_list(request):
 
 
 def customer_detail(request, pk):
-    customers = Customer.objects.filter(customer=pk)
     customer = Customer.objects.get(id=pk)
     return render(request, 'ghost/customer_detail.html', {'customer': customer})
 
