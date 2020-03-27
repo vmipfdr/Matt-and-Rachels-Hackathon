@@ -3,7 +3,9 @@ body {
   max-width: 50em;
   margin: auto;
   padding: 2em 1em;
-  background-color: purple;
+  background-image: url(https://www.ecopetit.cat/wpic/mpic/131-1311036_high-resolution-spooky-horror-peace-dark-halloween-gothic.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #user-info {
