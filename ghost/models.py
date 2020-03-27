@@ -10,7 +10,7 @@ class Customer(models.Model):
     # setting up the @ and . restrictions
 
     def __str__(self):
-        return self.author
+        return self.email
 
 
 # this gives us the ability to delete the artist and their songs
