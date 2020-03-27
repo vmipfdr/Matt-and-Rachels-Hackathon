@@ -12,7 +12,7 @@ def sign_up(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return render(request, 'accounts/signup.html', {'form': form})
+            return redirect('customer_list')
     else:
         form = UserForm()
     return render(request, 'accounts/signup.html', {'form': form})
