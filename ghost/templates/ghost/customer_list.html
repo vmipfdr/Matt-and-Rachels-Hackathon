@@ -1,0 +1,13 @@
+<h2>For the Business Side: Our Customers<a href="{% url 'new_customer' %}">Add New Customer</h2>
+
+<!-- this is writing this executable code -->
+<!-- thie first portion is starting a for loop -->
+<!-- in the list item this is what we are putting in the HTML -->
+<!-- you have to explicitly end the for loop afterwards -->
+<ul>
+    {% for customer in customers %}
+    <li>
+        <a href="{% url 'customer_detail' pk=post.pk %}">{{ customer.first }}{{ customer.last }}</a>
+    </li>
+    {% endfor %}
+</ul>
