@@ -1,6 +1,12 @@
 <!-- ghost/templates/ghost/base.html -->
 <!-- ... -->
-<nav>
+{% load static %}
+<head>
+  <title>Ghost</title>
+  <link rel="stylesheet" href="{% static 'css/ghost.css' %}" />
+</head>
+<body>
+  <nav>
   <a href="{% url 'customer_list' %}">Customers</a>
   <div class="user-info">
     {% if user.is_authenticated %} Welcome, {{ user.username }}
@@ -10,6 +16,9 @@
     <a href="{% url 'signup' %}">Signup</a>
     {% endif %}
   </div>
-</nav>
+  </nav>
+  {% block content %} {% endblock %}
+</body>
 <!-- ... -->
-<a href="{% url 'customer_create' %}">Subscribe to Our NewsLetter</a>
+  <a href="{% url 'customer_create' %}">Subscribe to Our NewsLetter</a>
+</html>
