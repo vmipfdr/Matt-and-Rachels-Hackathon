@@ -48,7 +48,7 @@ footer a {
   border: 1px solid black;
   margin: 0.5em;
   padding: 0.5em;
-  background-color: #eeeeee;
+  background-color: rgba(187, 187, 187);
 }
 
 footer a:hover {
@@ -59,11 +59,12 @@ footer a:hover {
 a,
 a:visited {
   text-decoration: none;
-  color: blue;
+  color: green;
 }
 
 a:hover {
-  background-color: #ccc;
+  box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 ul {
@@ -92,7 +93,8 @@ input {
   padding: 9px;
   border: solid 1px black;
   width: 300px;
-  background: whitesmoke;
+  color: gray;
+  background-color: black;
 }
 
 input[type="submit"],

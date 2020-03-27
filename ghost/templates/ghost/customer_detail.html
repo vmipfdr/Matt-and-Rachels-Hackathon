@@ -1,3 +1,9 @@
+{% load static %}
+
+<head>
+  <title>Customer Details</title>
+  <link rel="stylesheet" href="{% static 'css/ghost.css' %}" />
+</head>
 <h2>
   {{ customer.first }} {{ customer.last }}<a
     href="{% url 'customer_edit' pk=customer.pk %}"
