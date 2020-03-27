@@ -7,7 +7,7 @@
 <ul>
     {% for customer in customers %}
     <li>
-        <a href="{% url 'customer_detail' pk=post.pk %}">{{ customer.first }}{{ customer.last }}</a>
+        <a href="{% url 'customer_detail' pk=customer.pk %}">{{ customer.first }}{{ customer.last }}</a>
     </li>
     {% endfor %}
 </ul>
