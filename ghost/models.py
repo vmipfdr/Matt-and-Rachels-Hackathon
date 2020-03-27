@@ -7,19 +7,11 @@ class Customer(models.Model):
     first = models.CharField(max_length=20)
     last = models.CharField(max_length=20)
     email = models.TextField(max_length=50)
+    # setting up the @ and . restrictions
 
     def __str__(self):
         return self.author
 
-
-# class Comment(models.Model):
-#     author = models.CharField(max_length=100)
-#     body = models.CharField(max_length=200)
-#     post = models.ForeignKey(
-#         Post, on_delete=models.CASCADE, related_name='comment')
-
-#     def __str__(self):
-#         return self.body
 
 # this gives us the ability to delete the artist and their songs
 # with related_name gives us the ability to find songs by artist.songs
