@@ -15,7 +15,6 @@ def customer_list(request):
 
 
 def customer_detail(request, pk):
-    customers = Customer.objects.filter(customer=pk)
     customer = Customer.objects.get(id=pk)
     return render(request, 'ghost/customer_detail.html', {'customer': customer})
 
@@ -33,14 +32,15 @@ def customer_create(request):
 def customer_edit(request, pk):
     customer = Customer.objects.get(pk=pk)
     if request.method == "POST":
-        form = CustomerForm(request.POST, instance=comment)
+        form = CustomerForm(request.POST, instance=customer)
         if form.is_valid():
             customer = form.save()
-            return redirect('customer_list')
-    form = CustomerForm(instance=post)
+            return redirect('customer_detail', pk=customer.pk)
+    else:
+        form = CustomerForm(instance=customer)
     return render(request, 'ghost/customer_create.html', {'form': form})
 
 
 def customer_delete(request, pk):
-    Comment.objects.get(id=pk).delete()
-    return redirect('/customer_list')
+    Customer.objects.get(id=pk).delete()
+    return redirect('customer_list')
