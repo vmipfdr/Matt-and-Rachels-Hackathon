@@ -7,7 +7,6 @@ class Customer(models.Model):
     first = models.CharField(max_length=20)
     last = models.CharField(max_length=20)
     email = models.EmailField(max_length=250)
-    # setting up the @ and . restrictions
 
     def __str__(self):
         return self.email
