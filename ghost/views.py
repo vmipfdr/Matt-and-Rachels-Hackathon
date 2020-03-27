@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 # creating a variable for Artists.objects.all() will make our process cleaner
 #
 
-
+@login_required
 def customer_list(request):
     customers = Customer.objects.all()
     return render(request, 'ghost/customer_list.html', {'customers': customers})
@@ -31,7 +31,7 @@ def customer_detail(request, pk):
     return render(request, 'ghost/customer_detail.html', {'customer': customer})
 
 
-@login_required
+
 def customer_create(request):
     if request.method == "POST":
         form = CustomerForm(request.POST)
