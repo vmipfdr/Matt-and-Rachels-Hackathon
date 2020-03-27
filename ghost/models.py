@@ -9,7 +9,7 @@ class Customer(models.Model):
     email = models.TextField(max_length=50)
 
     def __str__(self):
-        return self.author
+        return self.email
 
 
 # class Comment(models.Model):
