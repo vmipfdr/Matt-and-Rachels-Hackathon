@@ -9,12 +9,12 @@ from django.contrib.auth.decorators import login_required
 def base(request):
     return render(request, 'ghost/base.html')
 
-
+@login_required
 def customer_list(request):
     customers = Customer.objects.all()
     return render(request, 'ghost/customer_list.html', {'customers': customers})
 
-
+@login_required
 def customer_detail(request, pk):
     customer = Customer.objects.get(id=pk)
     return render(request, 'ghost/customer_detail.html', {'customer': customer})
@@ -29,7 +29,7 @@ def customer_create(request):
     form = CustomerForm()
     return render(request, 'ghost/customer_create.html', {'form': form})
 
-
+@login_required
 def customer_edit(request, pk):
     customer = Customer.objects.get(pk=pk)
     if request.method == "POST":
@@ -41,7 +41,7 @@ def customer_edit(request, pk):
         form = CustomerForm(instance=customer)
     return render(request, 'ghost/customer_create.html', {'form': form})
 
-
+@login_required
 def customer_delete(request, pk):
     Customer.objects.get(id=pk).delete()
     return redirect('customer_list')
