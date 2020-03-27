@@ -6,18 +6,21 @@
   <link rel="stylesheet" href="{% static 'css/ghost.css' %}" />
 </head>
 <body>
-  <nav>
-  <a href="{% url 'customer_list' %}">Customers</a>
+  <h1 class="Masthead">DC Ghost Tours</h1>
   <div>
-    {% if user.is_authenticated %} Welcome, {{ user.username }}
+    <a href="{% url 'customer_create' %}" class="newsletter">Subscribe to Our Newsletter</a>
+  </div>
+  <footer>
+      <span class="welcome">
+        {% if user.is_authenticated %} Welcome, {{ user.username }}
+      </span>
+    <a href="{% url 'customer_list' %}">Customers</a>
     <a href="{% url 'logout' %}">Log out</a>
     {% else %}
     <a href="{% url 'login' %}">Login</a>
     <a href="{% url 'signup' %}">Signup</a>
     {% endif %}
-    <a href="{% url 'customer_create' %}">Subscribe to Our NewsLetter</a>
-  </div>
-  </nav>
+  </footer>
   {% block content %} {% endblock %}
 </body>
 <!-- ... -->

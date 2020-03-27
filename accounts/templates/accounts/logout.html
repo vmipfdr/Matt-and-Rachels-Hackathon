@@ -1,6 +1,6 @@
 {% extends 'ghost/base.html' %} {% block content %}
-<p>Logged out!</p>
-<a href="{% url 'login' %}">Click here to login again.</a>
+<p class="logged_out">Logged out!</p>
+<a href="{% url 'login' %}" class="logged_out">Click here to login again.</a>
 {% endblock %}
 
 <a href="/">back</a>
