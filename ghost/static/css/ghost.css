@@ -9,6 +9,7 @@ body {
   background-position: center;
   height: 100vh;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -19,8 +20,7 @@ body {
   color: #ffffff;
 }
 
-.sign-up{
-
+.sign-up {
 }
 
 footer {
@@ -31,16 +31,18 @@ footer {
   margin: 0 auto;
 }
 
-.newsletter{
+.newsletter {
   margin-top: 150px;
   margin-bottom: 150px;
 }
 
-.masthead, .sign-up{
+.masthead,
+.sign-up {
   text-align: center;
   color: whitesmoke;
   font-weight: 800;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 100px;
 }
 
@@ -142,8 +144,8 @@ a.no-fav {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px){
-  input{
+@media only screen and (max-width: 600px) {
+  input {
     padding: 5%;
   }
 }
