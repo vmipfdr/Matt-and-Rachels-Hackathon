@@ -3,7 +3,7 @@ from .models import Customer
 from .forms import CustomerForm
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+# Create your views here
 
 
 
