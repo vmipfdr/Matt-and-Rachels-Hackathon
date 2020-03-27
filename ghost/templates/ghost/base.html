@@ -1,8 +1,7 @@
 <!-- tunr/templates/ghost/base.html -->
 <!-- ... -->
 <nav>
-  <a href="{% url 'song_list' %}">Songs</a>
-  <a href="/">Artists</a>
+  <a href="{% url 'customer_list' %}">Customers</a>
   <div class="user-info">
     {% if user.is_authenticated %} Welcome, {{ user.username }}
     <a href="{% url 'logout' %}">Log out</a>
