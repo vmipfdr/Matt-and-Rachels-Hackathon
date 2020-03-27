@@ -1,0 +1,15 @@
+<h2>
+  {{ customer.first }}{{ customer.last }}<a
+    href="{% url 'customer_edit' pk=customer.pk %}"
+    >Edit</a
+  >
+  <a href="{% url 'customer_delete' pk=customer.pk %}">Delete</a>
+</h2>
+
+<!-- this is writing this executable code -->
+<!-- thie first portion is starting a for loop -->
+<!-- in the list item this is what we are putting in the HTML -->
+<!-- you have to explicitly end the for loop afterwards -->
+<p>Customer First Name: {{ customer.first }}</p>
+<p>Customer Last Name: {{ customer.last }}</p>
+<p>Customer Email: {{ customer.email }}</p>
