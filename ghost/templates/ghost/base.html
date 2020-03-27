@@ -4,10 +4,10 @@
   <a href="{% url 'customer_list' %}">Customers</a>
   <div class="user-info">
     {% if user.is_authenticated %} Welcome, {{ user.username }}
-    <a href="accounts/logout">Log out</a>
+    <a href="{% url 'logout' %}">Log out</a>
     {% else %}
-    <a href="accounts/login">Login</a>
-    <a href="accounts/signup">Signup</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'signup' %}">Signup</a>
     {% endif %}
   </div>
 </nav>
