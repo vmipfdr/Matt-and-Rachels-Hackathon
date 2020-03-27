@@ -19,6 +19,10 @@ body {
   color: #ffffff;
 }
 
+.sign-up{
+
+}
+
 footer {
   display: flex;
   flex-flow: row nowrap;
@@ -32,7 +36,7 @@ footer {
   margin-bottom: 150px;
 }
 
-.masthead{
+.masthead, .sign-up{
   text-align: center;
   color: whitesmoke;
   font-weight: 800;
@@ -136,4 +140,10 @@ a.no-fav {
 .fav:visited,
 .no-fav:visited {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px){
+  input{
+    padding: 5%;
+  }
 }

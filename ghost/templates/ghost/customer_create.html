@@ -3,8 +3,8 @@
   <title>Subscribe</title>
   <link rel="stylesheet" href="{% static 'css/ghost.css' %}" />
 </head>
-<h2>Sign Up for the NewsLetter</h2>
-<form method="POST">
+<h2 class="sign-up">Sign Up for our Newsletter</h2>
+<form method="POST" class="small-form">
   {% csrf_token %} {{ form.as_p}}
   <button type="submit">Submit</button>
 </form>
